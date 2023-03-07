@@ -27,10 +27,10 @@ flags.DEFINE_string("topic", "Bike riding", "Specify the blog topic")
 #flags.DEFINE_bool("show", True, "Show files included zipfile")
 
 def update_blog(repo_path, commit_message="Update blog"):
-    print("Update blog repo {repo_path}")  
+    print(f"Update blog repo {repo_path}")  
 
     repo = Repo(repo_path)
-    
+
     # git add .
     repo.git.add(all=True)
     # git commt -m "msg"
