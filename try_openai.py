@@ -33,7 +33,7 @@ def update_blog(repo_path, commit_message="Update blog"):
 
     # git add .
     repo.git.add(all=True)
-    # git commt -m "msg"
+    # git commit -m "msg"
     repo.index.commit(commit_message)
     # git push
     origin = repo.remote(name='origin')
@@ -55,7 +55,7 @@ def main(argv):
     if init:
         PATH_TO_CONTENT.mkdir(exist_ok=True, parents=True)
 
-    random_text_string = "xxxxxx"
+    random_text_string = "yyyyy"
 
     with open(PATH_TO_BLOG/"index.html", "w") as f:
         f.write(random_text_string)
